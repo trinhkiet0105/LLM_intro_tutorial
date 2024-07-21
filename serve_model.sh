@@ -1,0 +1,1 @@
+python3 -m vllm.entrypoints.openai.api_server --model neuralmagic/Qwen2-7B-Instruct-quantized.w8a16 --gpu-memory-utilization 0.7 --use-v2-block-manager --tensor-parallel-size 2 --port 1478 --enforce-eager --speculative-model "[ngram]" --num-speculative-tokens 3 --ngram-prompt-lookup-max 10
