@@ -48,5 +48,9 @@ or just run the `serve_model.sh` (which is my case of usage)
 ```bash
 bash serve_model.sh
 ```
-
-`--enforce-eager` means always use eager-mode PyTorch.reduces the memory requirement (of maintaining the CUDA graph). If False (or just remove the flag in the command line), will use eager mode and CUDA graph in hybrid for maximal performance and flexibility.
+`--model` your serving model, can be a name of models from huggingface or directory/file name of local model \
+`--gpu-memory-utilization` a float number from 0 --> 1 (default 0.9). So basically this number is how many memory from your gpu you want to use.\
+Leave this number to 1 mean all 100% memory will dedicate to this model serving and no more space for other tasks that need gpu.\
+For example, if the model you serving need 8GB to serve and your total gpu memory is 16GB, this number will be set to 0.5 at least to not crash\
+`--enforce-eager` True means always use eager-mode PyTorch, reduces the memory requirement (of maintaining the CUDA graph). \
+If False (or just remove the flag in the command line), will use eager mode and CUDA graph in hybrid for maximal performance and flexibility. 
