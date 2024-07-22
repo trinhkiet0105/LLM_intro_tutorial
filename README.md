@@ -50,7 +50,7 @@ For more detail on installations vllm and nm-vllm, check out their documents:
 Change the arguments to your cases of usage and run:
 
 ```bash
-python3 -m vllm.entrypoints.openai.api_server --model MODEL --gpu-memory-utilization GPU_MEMORY_UTILIZATION --tensor-parallel-size TENSOR_PARALLEL_SIZE --host HOST --port PORT --enforce-eager 
+python3 -m vllm.entrypoints.openai.api_server --model MODEL --gpu-memory-utilization GPU_MEMORY_UTILIZATION --tensor-parallel-size TENSOR_PARALLEL_SIZE --host HOST --port PORT --enforce-eager --api-key YOUR_CUSTOM_API_KEY
 ```
 
 or just run the `serve_model.sh` (which is my case of usage)
@@ -65,7 +65,8 @@ bash serve_model.sh
 - `--enforce-eager` True means always use eager-mode PyTorch, reduces the memory requirement (of maintaining the CUDA graph). \
 - If False (or just remove the flag in the command line), will use eager mode and CUDA graph in hybrid for maximal performance and flexibility. \
 - `--host` and `--port` to change the ,not very suprised, the host and port to serve th model. If removed, it will be to default of localhost and 8000 \
-- `--tensor-parallel-size` he number of visable GPUs you want to use
+- `--tensor-parallel-size` the number of visable GPUs you want to use
+- `--api-key` your custom API key to connect to the model, remove the flag means no API key
 
 ## Benchmarking
 
