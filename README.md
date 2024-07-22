@@ -1,4 +1,4 @@
-# Model Serving Benchmarking
+# An Introduction to LLM Serving, Benchmarking and Inference using vLLM & openai like api
 
 This repository contains scripts and tools for benchmarking performance of model served by vLLM engine and using the OpenAI endpoint. The goal is to measure and compare the efficiency, latency, and throughput of different model serving configurations.
 
