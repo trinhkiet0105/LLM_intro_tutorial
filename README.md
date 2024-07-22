@@ -95,3 +95,7 @@ bash benchmark_serving_vllm.sh
 ## Results
 
 full result should be in the directory mentioned in `--result-dir` flag
+
+## Credit
+
+`backend_request_func.py` and `benchmark_serving.py` was originally from [benchmark directory of vllm repository](https://github.com/vllm-project/vllm/tree/main/benchmarks)
