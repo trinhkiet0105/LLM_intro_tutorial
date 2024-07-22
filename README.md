@@ -1,7 +1,7 @@
 # An Introduction to LLM Serving, Benchmarking and Inference using vLLM & Openai compatible API
 
-This repository contains scripts and tools for benchmarking performance of model served by vLLM engine and using the Openai compatible API endpoint . The goal is to measure and compare the efficiency, latency, and throughput of different model serving configurations.
-(I just want to notice that you don't need to have api secret key from OpenAI themselves since you will serve your own model)
+This repository contains scripts and tools for benchmarking performance of model served by vLLM engine and using the Openai compatible API endpoint . The goal is to measure and compare the efficiency, latency, and throughput of different model serving configurations. \
+*I just want to notice that having api secret key from OpenAI themselves is optional since you will serve your own model* (if you have the hardware requirement for vLLM)
 
 ## Table of Contents
 
