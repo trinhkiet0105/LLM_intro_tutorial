@@ -8,6 +8,7 @@ This repository contains scripts and tools for benchmarking performance of model
 - [Serving](#serving) (if you don't have one already)
 - [Benchmarking](#benchmarking)
 - [Results](#results)
+- [Inference](#inference)
 
 ## Installation
 
@@ -96,6 +97,16 @@ bash benchmark_serving_vllm.sh
 ## Results
 
 full result should be in the directory mentioned in `--result-dir` flag
+
+## Inference
+
+Install openai-python
+
+```bash
+pip install openai
+```
+
+And play around with the `inference_api.ipynb`
 
 ## Credit
 
