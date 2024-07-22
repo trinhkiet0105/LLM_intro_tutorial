@@ -59,13 +59,13 @@ or just run the `serve_model.sh` (which is my case of usage)
 bash serve_model.sh
 ```
 
-`--model` your serving model, can be a name of models from huggingface or directory/file name of local model \
-`--gpu-memory-utilization` a float number from 0 --> 1 (default 0.9). So basically this number is how many memory from your gpu you want to use.\
-Leave this number to 1 mean all 100% memory will dedicate to this model serving and no more space for other tasks that need gpu.\
-`--enforce-eager` True means always use eager-mode PyTorch, reduces the memory requirement (of maintaining the CUDA graph). \
-If False (or just remove the flag in the command line), will use eager mode and CUDA graph in hybrid for maximal performance and flexibility. \
-`--host` and `--port` to change the ,not very suprised, the host and port to serve th model. If removed, it will be to default of localhost and 8000 \
-`--tensor-parallel-size` he number of visable GPUs you want to use
+- `--model` your serving model, can be a name of models from huggingface or directory/file name of local model \
+- `--gpu-memory-utilization` a float number from 0 --> 1 (default 0.9). So basically this number is how many memory from your gpu you want to use.\
+*Leave this number to 1 mean all 100% memory will dedicate to this model serving and no more space for other tasks that need gpu memory.*\
+- `--enforce-eager` True means always use eager-mode PyTorch, reduces the memory requirement (of maintaining the CUDA graph). \
+- If False (or just remove the flag in the command line), will use eager mode and CUDA graph in hybrid for maximal performance and flexibility. \
+- `--host` and `--port` to change the ,not very suprised, the host and port to serve th model. If removed, it will be to default of localhost and 8000 \
+- `--tensor-parallel-size` he number of visable GPUs you want to use
 
 ## Benchmarking
 
@@ -81,10 +81,10 @@ Run this for benchmark
 python3 benchmark_serving.py  --model MODEL --dataset-path ShareGPT_V3_unfiltered_cleaned_split.json --host HOST --port PORT --request-rate REQUEST_RATE --save-result --result-dir RESULT_DIR
 ```
 
-`--model` the served model name \
-`--host` and `--port` is the host and post of the served model \
-`--request-rate` how many requests are sent in 1 second. If leave blank, all messange will be sent at the same time with out waiting. \
-`--result-dir` the folder saving the result
+- `--model` the served model name \
+- `--host` and `--port` is the host and post of the served model \
+- `--request-rate` how many requests are sent in 1 second. If leave blank, all messange will be sent at the same time with out waiting. \
+- `--result-dir` the folder saving the result
 
 `benchmark_serving_vllm.sh` is my case of usage
 
