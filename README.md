@@ -50,7 +50,7 @@ vllm serve MODEL \
     --gpu-memory-utilization GPU_MEMORY_UTILIZATION --download-dir DOWNLOAD_DIR \
     --tensor-parallel-size TENSOR_PARALLEL_SIZE  \
     --host HOST --port PORT \
-    --max-model-len 8192 \
+    --max-model-len MAX_MODEL_LEN \
     --enable-auto-tool-choice --tool-call-parser hermes \
 ```
 
